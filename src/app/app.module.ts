@@ -8,13 +8,18 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AboutComponent } from './about/about.component';
 import { appRouterProviders } from './app.routes';
 import { SearchComponent } from './search/search.component';
+import { ArtistComponent } from './artist/artist.component';
+import { SpotifyService } from './services/spotify.service';
+import { AlbumComponent } from './album/album.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     AboutComponent,
-    SearchComponent
+    SearchComponent,
+    ArtistComponent,
+    AlbumComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +27,7 @@ import { SearchComponent } from './search/search.component';
     HttpModule,
     appRouterProviders
   ],
-  providers: [],
+  providers: [SpotifyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
